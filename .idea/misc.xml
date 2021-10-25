@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Coco/app/src/main/res/font/font.xml" value="0.2838541666666667" />
+        <entry key="..\:/Coco/app/src/main/res/layout/activity_book_train.xml" value="0.264" />
+        <entry key="..\:/Coco/app/src/main/res/layout/activity_insert_dbactivity.xml" value="0.4" />
+        <entry key="..\:/Coco/app/src/main/res/layout/activity_main.xml" value="0.264" />
+        <entry key="..\:/Coco/app/src/main/res/layout/activity_seatselect.xml" value="0.264" />
+        <entry key="..\:/Coco/app/src/main/res/layout/book2.xml" value="0.25364583333333335" />
+        <entry key="..\:/Coco/app/src/main/res/layout/book_main.xml" value="0.264" />
+        <entry key="..\:/Coco/app/src/main/res/layout/person.xml" value="0.24818840579710144" />
+        <entry key="..\:/Coco/app/src/main/res/layout/pricelist.xml" value="0.264" />
+        <entry key="..\:/Coco/app/src/main/res/layout/seatlist.xml" value="0.23233695652173914" />
+        <entry key="..\:/Coco/app/src/main/res/layout/seatlistgrid.xml" value="0.13072916666666667" />
+        <entry key="..\:/Coco/app/src/main/res/layout/stationllist.xml" value="0.264" />
+        <entry key="..\:/Coco/app/src/main/res/layout/trainlist.xml" value="0.25364583333333335" />
+        <entry key="..\:/Coco/app/src/main/res/layout/trainlistgrid.xml" value="0.6" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>
