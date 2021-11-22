@@ -465,3 +465,34 @@ db.password=1234
 </mapper> 
 
 
+
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<!--  dbcp -->
+<bean id="dbcp" class="org.apache.commons.dbcp.BasicDataSource">
+<!--  db connection pool을 만들기 위해, driver,url,user,pw -->
+<!--  property태그는 각 변수의 set매서드를 호출해서 값을 넣어준다. -->
+<!--  dbcp.setUrl("~~~~~") -->
+<property name="driverClassName" value="oracle.jdbc.OracleDriver"></property>
+<property name="url" value="jdbc:oracle:thin:@localhost:1521:xe"></property>
+<property name="username" value=""></property>
+<property name="password" value=""></property>
+</bean>
+
+
+<!-- mybatis와 관련된 설정이 많아서, 설정만 따로 해주는 클래스의 객체 -->
+<bean id="config" class="org.mybatis.spring.SqlSessionFactoryBean">
+	<property name="configLocation" value="classpath:mybatis-config.xml"></property>
+	<property name="dataSource" ref="dbcp"></property>
+</bean>
+
+
+<!--  mybatis -->
+<bean id="mybatis" class="org.mybatis.spring.SqlSessionTemplate">
+<constructor-arg ref="config"></constructor-arg>
+</bean>
+</beans>
+
