@@ -1,4 +1,53 @@
 # CocoProject
+package com.mega.test05;
+
+import androidx.appcompat.app.AppCompatActivity;
+
+import android.os.Bundle;
+import android.widget.ArrayAdapter;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.ListView;
+
+import java.util.ArrayList;
+
+public class MainActivity6 extends AppCompatActivity {
+EditText etListAdd;
+Button btnListAdd;
+ListView listV;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main6);
+        setTitle("리스트뷰 테스트");
+
+        etListAdd = findViewById(R.id.etListAdd);
+        btnListAdd = findViewById(R.id.btnListAdd);
+
+        ArrayList<String> list = new ArrayList<>();
+
+        list.add("히어로즈");
+        list.add("24시");
+        list.add("로스트");
+        list.add("빅뱅이론");
+
+        ListView listV = findViewById(R.id.listV);
+
+        ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, list);
+
+        listV.setAdapter(adapter);
+
+        btnListAdd.setOnClickListener(v -> {
+            String data = etListAdd.getText().toString();
+            list.add(data);
+            adapter.notifyDataSetChanged();
+        });
+    }
+
+}
+
+
 
 
 // -------------------------- 조건에 맞는 값 set Text--------------------------------
